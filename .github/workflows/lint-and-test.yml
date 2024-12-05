@@ -1,5 +1,4 @@
-name: Dashboard Application
-
+name: Quiz App
 on:
   push:
 
