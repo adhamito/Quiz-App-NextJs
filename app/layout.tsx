@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
+import Navbar from "./components/Navbar";
 
 // Define fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -22,8 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Quiz YPOL</title>
+      </head>
       <body className={`${inter.className} ${poppins.className} antialiased`}>
-        {children}
+        <header>
+          <Navbar />
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );
